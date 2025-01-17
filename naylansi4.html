@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page 3 - Ce qui a été fait depuis le début de l’année</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      color: #333;
+      flex-direction: column;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 900px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .content {
+      font-size: 14px;
+      text-align: left;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .table-container {
+      font-size: 14px;
+      margin-top: 20px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    td {
+      background-color: #f9f9f9;
+    }
+
+    /* Format horizontal */
+    @media print {
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .content {
+        width: 45%;
+        margin: 10px;
+      }
+      .table-container {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Ce qui a été fait depuis le début de l’année</h2>
+
+    <!-- Première partie de la page (Systèmes de numération) -->
+    <div class="content">
+      <p><strong>Dans un premier temps, voici un aperçu des concepts que j'ai appris :</strong></p>
+      <ul>
+        <li><strong>Les systèmes de numération :</strong></li>
+        <ul>
+          <li><strong>Décimal (Base 10)</strong> : Utilisé dans la vie courante, chiffres de 0 à 9.</li>
+          <li><strong>Binaire (Base 2)</strong> : Utilisé par les ordinateurs, chiffres de 0 et 1.</li>
+          <li><strong>Hexadécimal (Base 16)</strong> : Utilisé en informatique pour simplifier les valeurs binaires, chiffres de 0 à 9 et A à F.</li>
+        </ul>
+      </ul>
+      <p>Ces systèmes sont essentiels pour comprendre le fonctionnement des ordinateurs et leur manière de traiter l'information.</p>
+    </div>
+
+    <!-- Deuxième partie de la page (Expressions booléennes) -->
+    <div class="content">
+      <p><strong>Ensuite, nous avons abordé les expressions booléennes :</strong></p>
+      <ul>
+        <li>Les **expressions booléennes** utilisent des valeurs logiques (**Vrai** ou **Faux**) et des opérateurs comme **ET (AND)**, **OU (OR)** et **NON (NOT)** pour créer des conditions.</li>
+        <ul>
+          <li>**ET (AND)** renvoie **Vrai** si les deux opérandes sont **Vrais**.</li>
+          <li>**OU (OR)** renvoie **Vrai** si **au moins un** des opérandes est **Vrai**.</li>
+          <li>**NON (NOT)** inverse la valeur de l’opérande.</li>
+        </ul>
+        <li>Ces expressions sont largement utilisées en programmation et en logique des circuits pour prendre des décisions basées sur des conditions.</li>
+      </ul>
+    </div>
+
+    <!-- Troisième partie de la page (Architecture et Système d'exploitation) -->
+    <div class="content">
+      <p><strong>Enfin, j'ai étudié l'architecture des systèmes et des systèmes d'exploitation :</strong></p>
+      <ul>
+        <li>L'**architecture d'un système** fait référence à sa structure globale, incluant les composants matériels et logiciels qui interagissent pour exécuter des tâches.</li>
+        <li>Un **système d'exploitation** gère ces ressources, permettant la communication entre le matériel, les logiciels et l'utilisateur, tout en assurant la gestion des processus, de la mémoire et des périphériques.</li>
+      </ul>
+      <p>Ces connaissances sont fondamentales pour comprendre comment les ordinateurs fonctionnent et comment gérer efficacement les ressources matérielles et logicielles.</p>
+    </div>
+
+    <!-- Tableau avec des informations fictives sur l'élève -->
+    <div class="table-container">
+      <h3>Tableau de suivi des progrès</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Module</th>
+            <th>Compétence Acquise</th>
+            <th>Évaluation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Base de données</td>
+            <td>Création de tables et requêtes SQL</td>
+            <td>80%</td>
+          </tr>
+          <tr>
+            <td>Programmation web</td>
+            <td>HTML, CSS, et premières notions de JS</td>
+            <td>90%</td>
+          </tr>
+          <tr>
+            <td>Systèmes d'exploitation</td>
+            <td>Compréhension des processus et de la mémoire</td>
+            <td>85%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizz Culture Générale</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 70%;  /* Augmenté pour occuper plus d'espace horizontal */
+      max-width: 800px;  /* Largeur maximale de la page */
+      min-height: 100vh; /* Utilisation de toute la hauteur */
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .presentation {
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .quiz-container {
+      width: 100%;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .quiz-question {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .quiz-options {
+      margin-bottom: 15px;
+    }
+
+    .quiz-options input {
+      margin-right: 15px;
+      margin-bottom: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Quizz Culture Générale</h1>
+    
+    <!-- Présentation -->
+    <div class="presentation">
+      <p><strong>Présentation :</strong><br>
+      Je m'appelle Nayla et je suis Algérienne. Je suis née à Bondy, mais je vis actuellement à Sevran (93). J'ai une petite sœur et un petit frère, avec qui je partage de bons moments. Actuellement, je suis en classe de Première au lycée Iqra. C'est un parcours qui me permet de m'épanouir dans mes études tout en me rapprochant de mes racines et de ma culture.</p>
+    </div>
+    
+    <!-- Quizz -->
+    <form id="quizForm">
+      <div class="quiz-container">
+        <div class="quiz-question">
+          <label>1. Quel est le plus grand océan du monde ?</label><br>
+          <div class="quiz-options">
+            <input type="radio" name="q1" value="Pacifique"> Pacifique<br>
+            <input type="radio" name="q1" value="Atlantique"> Atlantique<br>
+            <input type="radio" name="q1" value="Indien"> Indien<br>
+            <input type="radio" name="q1" value="Arctique"> Arctique<br>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <label>2. Quelle est la capitale du Kazakhstan ?</label><br>
+          <div class="quiz-options">
+            <input type="radio" name="q2" value="Almaty"> Almaty<br>
+            <input type="radio" name="q2" value="Astana"> Astana<br>
+            <input type="radio" name="q2" value="Tachkent"> Tachkent<br>
+            <input type="radio" name="q2" value="Bichkek"> Bichkek<br>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <label>3. Qui a peint "La Nuit étoilée" ?</label><br>
+          <div class="quiz-options">
+            <input type="radio" name="q3" value="Vincent van Gogh"> Vincent van Gogh<br>
+            <input type="radio" name="q3" value="Claude Monet"> Claude Monet<br>
+            <input type="radio" name="q3" value="Pablo Picasso"> Pablo Picasso<br>
+            <input type="radio" name="q3" value="Salvador Dalí"> Salvador Dalí<br>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <label>4. En quelle année a eu lieu la Première Guerre mondiale ?</label><br>
+          <div class="quiz-options">
+            <input type="radio" name="q4" value="1914"> 1914<br>
+            <input type="radio" name="q4" value="1915"> 1915<br>
+            <input type="radio" name="q4" value="1917"> 1917<br>
+            <input type="radio" name="q4" value="1920"> 1920<br>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <label>5. Quelle est la langue officielle du Brésil ?</label><br>
+          <div class="quiz-options">
+            <input type="radio" name="q5" value="Portugais"> Portugais<br>
+            <input type="radio" name="q5" value="Espagnol"> Espagnol<br>
+            <input type="radio" name="q5" value="Anglais"> Anglais<br>
+            <input type="radio" name="q5" value="Italien"> Italien<br>
+          </div>
+        </div>
+
+        <button type="button" onclick="showResults()">Résultat</button>
+        <button type="button" onclick="showAnswers()">Réponses</button>
+      </div>
+    </form>
+
+    <div class="footer">
+      <p>Bonne chance et apprenez de nouvelles choses !</p>
+    </div>
+  </div>
+
+  <script>
+    // Fonction pour afficher le score
+    function showResults() {
+      var score = 0;
+
+      if (document.querySelector('input[name="q1"]:checked')?.value === "Pacifique") score++;
+      if (document.querySelector('input[name="q2"]:checked')?.value === "Astana") score++;
+      if (document.querySelector('input[name="q3"]:checked')?.value === "Vincent van Gogh") score++;
+      if (document.querySelector('input[name="q4"]:checked')?.value === "1914") score++;
+      if (document.querySelector('input[name="q5"]:checked')?.value === "Portugais") score++;
+
+      alert("Vous avez " + score + " bonne(s) réponse(s) !");
+    }
+
+    // Fonction pour afficher les bonnes réponses
+    function showAnswers() {
+      alert("Réponse 1: Pacifique\nRéponse 2: Astana\nRéponse 3: Vincent van Gogh\nRéponse 4: 1914\nRéponse 5: Portugais");
+      location.reload(); // Rafraîchit la page pour afficher les réponses sélectionnées
+    }
+  </script>
+
+</body>
+</html>

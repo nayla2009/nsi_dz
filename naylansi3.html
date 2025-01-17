@@ -1,0 +1,46 @@
+form>
+    <label for="password">Mot de passe:</label>
+    <input type="password" id="password" name="password">
+    <button type="button" onclick="togglePassword()">Afficher/Masquer</button>
+  </form>
+  
+  <script>
+    function togglePassword() {
+      var passwordField = document.getElementById('password');
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+      } else {
+        passwordField.type = "password";
+      }
+    }
+  </script>
+  <p class="highlight">Trop bien ça</p>
+
+  <style>
+    .highlight {
+      transition: color 0.3s ease;
+    }
+    .highlight:hover {
+      color: #FF5733;  /* change to any color */
+    }
+  </style>
+  <select>
+    <option value="premiere">premiere</option>
+    <option value="terminal">terminal</option>
+    <option value="seconde">seconde</option>
+  </select>
+  <form onsubmit="return validateForm()">
+    <input type="text" id="userInput" placeholder="Entrez quelque chose">
+    <button type="submit">Valider</button>
+  </form>
+  
+  <script>
+    function validateForm() {
+      var input = document.getElementById('userInput').value;
+      if (input == "") {
+        alert("Erreur : champ vide !");
+        return false;
+      }
+    }
+  </script>
+  <
